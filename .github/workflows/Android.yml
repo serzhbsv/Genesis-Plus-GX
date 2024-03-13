@@ -19,7 +19,8 @@ jobs:
     - name: Compile RA
       run: |
         cd libretro/jni
-        ./gradlew assembleDebug
+        chmod u+x  ./gradlew
+        ./gradlew build
         find . -iname "*.apk" -exec ls -l "{}" \;
         ls
         cd ../
