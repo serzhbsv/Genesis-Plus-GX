@@ -32,10 +32,10 @@ android {
       ndkBuild {
         arguments "-j${Runtime.runtime.availableProcessors()}"
       }
-    }
+    } 
     targetSdkVersion 28
     versionCode System.currentTimeSeconds().toInteger()
-    versionName "${getManifestAttribute("versionName")}_GIT"
+   
   }
 
   productFlavors {
@@ -75,4 +75,5 @@ android {
 def dynamicFeatures = file("dynamic_features.gradle")
 if(dynamicFeatures.exists()) {
   apply from: "dynamic_features.gradle"
+}
 }
