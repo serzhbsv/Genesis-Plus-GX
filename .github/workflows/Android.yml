@@ -18,9 +18,14 @@ jobs:
 
     - name: Compile RA
       run: |
-        cd pkg/android/phoenix
+        cd libretro/jni
         ./gradlew assembleDebug
         find . -iname "*.apk" -exec ls -l "{}" \;
+        ls
+        cd ../
+        ls
+        cd ../../
+        ls
 
     - name: Get short SHA
       id: slug
